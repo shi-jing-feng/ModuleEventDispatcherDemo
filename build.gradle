@@ -1,0 +1,44 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    ext.kotlin_version = "1.5.0"
+    repositories {
+        google()
+        mavenCentral()
+        // JitPack远程仓库
+        maven { url 'https://jitpack.io' }
+//        // api 本地测试仓库地址
+//        maven { url "file://" + rootDir.path + File.separator + "generate" + File.separator + "api" }
+//        // apt_processor 本地测试仓库地址
+//        maven { url "file://" + rootDir.path + File.separator + "generate" + File.separator + "apt_processor" }
+//        // auto_gradle_plugin 本地测试仓库地址
+//        maven { url "file://" + rootDir.path + File.separator + "generate" + File.separator + "auto_gradle_plugin" }
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:4.0.2"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+
+        // 自动生成代码Gradle插件
+        classpath "com.github.SJF20:module_event_dispatcher_auto_gradle_plugin:1.0.0"
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+        // JitPack远程仓库
+        maven { url 'https://jitpack.io' }
+//        // api 本地测试仓库地址
+//        maven { url "file://" + rootDir.path + File.separator + "generate" + File.separator + "api" }
+//        // apt_processor 本地测试仓库地址
+//        maven { url "file://" + rootDir.path + File.separator + "generate" + File.separator + "apt_processor" }
+//        // auto_gradle_plugin 本地测试仓库地址
+//        maven { url "file://" + rootDir.path + File.separator + "generate" + File.separator + "auto_gradle_plugin" }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
