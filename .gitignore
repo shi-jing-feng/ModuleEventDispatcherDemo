@@ -13,3 +13,6 @@
 .externalNativeBuild
 .cxx
 local.properties
+/module_event_dispatcher_api
+/module_event_dispatcher_apt_processor
+/module_event_dispatcher_auto_gradle_plugin
